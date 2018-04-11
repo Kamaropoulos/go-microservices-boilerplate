@@ -9,7 +9,7 @@ import (
 )
 
 // ServiceName The name of the service
-var ServiceName = "BlankService"
+var ServiceName = "ExampleService"
 
 func initLogger() {
 	// TODO: Move Log related stuff to another file
