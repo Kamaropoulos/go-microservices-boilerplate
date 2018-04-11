@@ -14,7 +14,7 @@ var APIServer *echo.Echo
 
 func createServer() {
 	APIServer = echo.New()
-
+	APIServer.HideBanner = true
 	APIServer.Logger = logrusmiddleware.Logger{log.StandardLogger()}
 	APIServer.Use(logrusmiddleware.Hook())
 }
@@ -28,7 +28,6 @@ func Start(port string) {
 func Initialize() {
 
 	createServer()
-	APIServer.HideBanner = true
 
 	//
 	// Register API Endpoinds here
